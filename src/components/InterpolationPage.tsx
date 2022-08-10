@@ -100,5 +100,6 @@ const styles = StyleSheet.create({
   text: {
     color: "white",
     fontSize: 60,
+    fontFamily: "Poppins_400Regular",
   },
 });
