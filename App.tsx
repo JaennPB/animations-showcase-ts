@@ -11,6 +11,7 @@ import {
 import CircularProgress from "./src/screens/CircularProgress";
 import HomeScreen from "./src/screens/HomeScreen";
 import InterpolationSV from "./src/screens/InterpolationSV";
+import SlideCounter from "./src/screens/SlideCounter";
 
 type NavParams = {
   HomeScreen: undefined;
@@ -36,9 +37,21 @@ export default function App() {
 
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="light-content" />
       <NavigationContainer>
-        <Drawer.Navigator>
+        <Drawer.Navigator
+          screenOptions={{
+            headerStyle: { backgroundColor: "#303858" },
+            headerTintColor: "white",
+            headerShadowVisible: false,
+          }}
+        >
+          <Drawer.Screen
+            name="SlideCounter"
+            component={SlideCounter}
+            options={{ headerTitle: "Counter", drawerLabel: "Counter" }}
+          />
+
           <Drawer.Screen
             name="CircularProgressBar"
             component={CircularProgress}
@@ -67,11 +80,6 @@ export default function App() {
             name="CardStack"
             component={HomeScreen}
             options={{ headerTitle: "Stack", drawerLabel: "Stack" }}
-          />
-          <Drawer.Screen
-            name="SlideCounter"
-            component={HomeScreen}
-            options={{ headerTitle: "Counter", drawerLabel: "Counter" }}
           />
           <Drawer.Screen
             name="LoaderClock"

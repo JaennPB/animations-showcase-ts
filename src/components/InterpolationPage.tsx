@@ -71,7 +71,7 @@ const InterpolationPage: React.FC<Props> = ({ title, index, translateX }) => {
     <View
       style={[
         styles.pageContainer,
-        { backgroundColor: `rgba(0, 150, 256, 0.${index + 2})` },
+        { backgroundColor: `rgba(48, 56, 88, 0.${index + 5})` },
       ]}
     >
       <Animated.View style={[styles.square, rStyleBox]}>
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   square: {
     height: SQUARE,
     width: SQUARE,
-    backgroundColor: "rgba(0, 150, 256, 0.3)",
+    backgroundColor: "rgba(48, 56, 88, 0.5)",
     alignItems: "center",
     justifyContent: "center",
   },

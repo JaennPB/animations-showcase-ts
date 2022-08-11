@@ -33,7 +33,11 @@ const CircularProgress: React.FC = () => {
   return (
     <View style={styles.container}>
       <ReText
-        style={{ fontSize: 60, fontFamily: "Poppins_600SemiBold" }}
+        style={{
+          fontSize: 60,
+          fontFamily: "Poppins_600SemiBold",
+          color: "white",
+        }}
         text={animatedText}
       />
       <View style={styles.circle}>
@@ -43,13 +47,13 @@ const CircularProgress: React.FC = () => {
             cy={height / 2}
             r={CIRCLE_LENGTH / (2 * Math.PI)}
             strokeWidth={25}
-            stroke="#e5e5e5"
+            stroke="#303858"
           />
           <AnimatedCircle
             cx={width / 2}
             cy={height / 2}
             r={CIRCLE_LENGTH / (2 * Math.PI)}
-            stroke="#2dd4bf"
+            stroke="#A6E1FA"
             strokeWidth={15}
             strokeDasharray={CIRCLE_LENGTH}
             animatedProps={animatedProps}
@@ -57,7 +61,7 @@ const CircularProgress: React.FC = () => {
           />
         </Svg>
       </View>
-      <Button title="Start" onPress={startAnimationHandler} />
+      <Button title="Start" onPress={startAnimationHandler} color="white" />
     </View>
   );
 };
@@ -69,6 +73,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#444b6f",
   },
   circle: {
     position: "absolute",
